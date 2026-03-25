@@ -2,6 +2,10 @@
 
 Premium, conversion-focused landing page MVP for capturing leads for the **AI Wealth Blueprint**.
 
+## Project Rules
+
+- See [`PROJECT_RULES.md`](./PROJECT_RULES.md) for repository-wide design, UX, and architecture rules.
+
 ## Stack
 
 - Next.js (App Router)
