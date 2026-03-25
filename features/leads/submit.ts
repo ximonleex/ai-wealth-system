@@ -1,4 +1,4 @@
-import { leadConfig } from "@/lib/leads/config";
+import { leadConfig } from "@/features/leads/config";
 import { LeadPayload, LeadSubmissionResult } from "@/types/leads";
 
 const DELAY_MS = 900;

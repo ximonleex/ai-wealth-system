@@ -47,11 +47,23 @@ npm run build
 
 ```text
 app/
+  (marketing)/
+  (app)/
+    tools/
+    members/
+    prompts/
+    resources/
+  api/
 components/
-  layout/
-  sections/
-  ui/
+  shared/
+    layout/
+    ui/
+features/
+  landing/
+    sections/
+  leads/
 lib/
+types/
 ```
 
 ## Next steps

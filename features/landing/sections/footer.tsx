@@ -1,4 +1,4 @@
-import { Container } from "@/components/layout/container";
+import { Container } from "@/components/shared/layout/container";
 
 export function FooterSection() {
   return (

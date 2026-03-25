@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Container } from "@/components/layout/container";
+import { Container } from "@/components/shared/layout/container";
 
 type SectionProps = {
   children: ReactNode;

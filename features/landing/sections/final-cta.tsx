@@ -1,6 +1,6 @@
-import { Section } from "@/components/layout/section";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Section } from "@/components/shared/layout/section";
+import { Button } from "@/components/shared/ui/button";
+import { Card } from "@/components/shared/ui/card";
 
 export function FinalCtaSection() {
   return (

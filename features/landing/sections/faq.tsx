@@ -1,6 +1,6 @@
-import { Section } from "@/components/layout/section";
-import { Card } from "@/components/ui/card";
-import { SectionTitle } from "@/components/ui/section-title";
+import { Section } from "@/components/shared/layout/section";
+import { Card } from "@/components/shared/ui/card";
+import { SectionTitle } from "@/components/shared/ui/section-title";
 
 const faqs = [
   {

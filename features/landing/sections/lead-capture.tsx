@@ -1,11 +1,11 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { Section } from "@/components/layout/section";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { SectionTitle } from "@/components/ui/section-title";
+import { Section } from "@/components/shared/layout/section";
+import { Button } from "@/components/shared/ui/button";
+import { Card } from "@/components/shared/ui/card";
+import { Input } from "@/components/shared/ui/input";
+import { SectionTitle } from "@/components/shared/ui/section-title";
 
 type FormState = {
   name: string;

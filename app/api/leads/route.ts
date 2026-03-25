@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { submitLead } from "@/lib/leads/submit";
+import { submitLead } from "@/features/leads/submit";
 import { LeadPayload } from "@/types/leads";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

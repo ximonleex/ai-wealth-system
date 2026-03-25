@@ -1,5 +1,5 @@
-import { Section } from "@/components/layout/section";
-import { Button } from "@/components/ui/button";
+import { Section } from "@/components/shared/layout/section";
+import { Button } from "@/components/shared/ui/button";
 
 export function HeroSection() {
   return (
