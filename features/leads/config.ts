@@ -5,5 +5,9 @@ export const leadConfig: {
   webhookUrl?: string;
   customApiUrl?: string;
 } = {
-  provider: "placeholder",
+  provider:
+    (process.env.LEAD_PROVIDER as LeadIntegrationProvider | undefined) ??
+    "webhook",
+  webhookUrl: process.env.LEAD_WEBHOOK_URL,
+  customApiUrl: process.env.LEAD_CUSTOM_API_URL,
 };

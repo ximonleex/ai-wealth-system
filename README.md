@@ -36,6 +36,40 @@ npm run dev
 
 Then open: [http://localhost:3000](http://localhost:3000)
 
+### Webhook configuration for lead form
+
+Create a local env file:
+
+```bash
+cp .env.example .env.local
+```
+
+Set your webhook URL:
+
+```env
+LEAD_PROVIDER=webhook
+LEAD_WEBHOOK_URL=https://your-webhook-endpoint.example
+```
+
+The app sends a JSON POST payload in this format:
+
+```json
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+```
+
+### How to test webhook integration
+
+1. Start the app with `npm run dev`
+2. Open `http://localhost:3000`
+3. Submit the lead form with a real name + email
+4. Confirm your webhook endpoint received a POST request with JSON body
+5. Validate UI behavior:
+   - success message appears for 2xx webhook responses
+   - error message appears for non-2xx responses or network failures
+
 ## Build and lint
 
 ```bash
@@ -68,7 +102,6 @@ types/
 
 ## Next steps
 
-- Connect form to API route + email provider
 - Add thank-you/download flow for blueprint PDF
 - Add analytics events for CTA and form conversion
 - Polish SEO metadata and social preview image
