@@ -32,9 +32,11 @@ export function HowItWorksSection() {
       />
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {steps.map((item) => (
-          <Card key={item.step} className="relative overflow-hidden">
-            <p className="text-xs tracking-[0.2em] text-wealth-gold">STEP {item.step}</p>
-            <h3 className="mt-3 text-lg font-semibold text-foreground">{item.title}</h3>
+          <Card key={item.step} className="relative h-full overflow-hidden">
+            <p className="text-xs tracking-[0.22em] text-wealth-gold/90">
+              STEP {item.step}
+            </p>
+            <h3 className="mt-4 text-lg font-semibold text-foreground">{item.title}</h3>
             <p className="mt-3 text-sm leading-7 text-text-muted">{item.description}</p>
           </Card>
         ))}

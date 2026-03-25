@@ -14,17 +14,18 @@ export function SectionTitle({
   align = "left",
 }: SectionTitleProps) {
   const textAlignment = align === "center" ? "text-center" : "text-left";
+  const descriptionWidth = align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl";
 
   return (
     <div className={`space-y-4 ${textAlignment}`}>
       {eyebrow ? (
-        <p className="text-xs tracking-[0.22em] text-wealth-gold uppercase">{eyebrow}</p>
+        <p className="text-[11px] tracking-[0.24em] text-wealth-gold uppercase">{eyebrow}</p>
       ) : null}
-      <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+      <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-[2.6rem]">
         {title}
       </h2>
       {description ? (
-        <p className="mx-auto max-w-2xl text-sm leading-7 text-text-muted md:text-base">
+        <p className={`${descriptionWidth} text-sm leading-7 text-text-muted md:text-base`}>
           {description}
         </p>
       ) : null}

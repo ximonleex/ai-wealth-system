@@ -9,7 +9,7 @@ import { LeadCaptureSection } from "@/components/sections/lead-capture";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <main>
+      <main className="relative">
         <HeroSection />
         <LeadCaptureSection />
         <BenefitsSection />

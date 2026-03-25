@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #111315;
-  --foreground: #e8ecea;
-  --text-muted: #a9b2ad;
-  --card-surface: #15191b;
-  --card-border: #2a322e;
+  --background: #101214;
+  --foreground: #ecf0ed;
+  --text-muted: #adb5b0;
+  --card-surface: #14181a;
+  --card-surface-soft: #161b1d;
+  --card-border: #2b332f;
   --green-900: #0e3b2e;
-  --green-700: #145a45;
-  --gold-500: #b89a5d;
+  --green-700: #17614a;
+  --gold-500: #b59a67;
 }
 
 @theme inline {
@@ -17,6 +18,7 @@
   --font-sans: var(--font-manrope);
   --color-text-muted: var(--text-muted);
   --color-card-surface: var(--card-surface);
+  --color-card-surface-soft: var(--card-surface-soft);
   --color-card-border: var(--card-border);
   --color-wealth-green-dark: var(--green-900);
   --color-wealth-green: var(--green-700);
@@ -26,10 +28,13 @@
 body {
   background-color: var(--background);
   background-image:
-    radial-gradient(circle at 12% 15%, color-mix(in srgb, var(--green-700) 25%, transparent), transparent 42%),
-    radial-gradient(circle at 85% 2%, color-mix(in srgb, var(--gold-500) 16%, transparent), transparent 38%);
+    radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--green-700) 22%, transparent), transparent 38%),
+    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--gold-500) 13%, transparent), transparent 30%),
+    linear-gradient(180deg, #0f1314 0%, #101214 30%, #0f1113 100%);
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -40,4 +45,8 @@ body {
 a,
 button {
   cursor: pointer;
+}
+
+main {
+  position: relative;
 }

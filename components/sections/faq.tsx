@@ -23,17 +23,18 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <Section>
+    <Section className="border-y border-card-border/35 bg-[#0f1416]/45">
       <SectionTitle
         eyebrow="FAQ"
         title="Strategic Questions, Clear Answers"
         description="Everything you need before requesting access."
+        align="center"
       />
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
+      <div className="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2">
         {faqs.map((faq) => (
-          <Card key={faq.q}>
+          <Card key={faq.q} className="p-5 md:p-6">
             <h3 className="text-base font-semibold text-foreground">{faq.q}</h3>
-            <p className="mt-2 text-sm leading-7 text-text-muted">{faq.a}</p>
+            <p className="mt-3 text-sm leading-7 text-text-muted">{faq.a}</p>
           </Card>
         ))}
       </div>
