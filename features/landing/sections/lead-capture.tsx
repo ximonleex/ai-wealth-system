@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { FormEvent, useMemo, useState } from "react";
 import { Section } from "@/components/shared/layout/section";
 import { Button } from "@/components/shared/ui/button";
@@ -15,6 +16,7 @@ type FormState = {
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function LeadCaptureSection() {
+  const router = useRouter();
   const [form, setForm] = useState<FormState>({ name: "", email: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -68,6 +70,7 @@ export function LeadCaptureSection() {
           "Success. Please check your inbox for your AI Wealth Blueprint shortly."
       );
       setForm({ name: "", email: "" });
+      router.push("/thank-you");
     } catch {
       setErrorMessage(
         "Connection issue detected. Please retry in a few seconds."
