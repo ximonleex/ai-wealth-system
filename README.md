@@ -70,6 +70,16 @@ The app sends a JSON POST payload in this format:
    - success message appears for 2xx webhook responses
    - error message appears for non-2xx responses or network failures
 
+### Optional direct blueprint download on thank-you page
+
+If you want the thank-you page to show a direct download CTA, set:
+
+```env
+BLUEPRINT_DOWNLOAD_URL=https://your-domain.example/ai-wealth-blueprint.pdf
+```
+
+If this variable is not set, the page will prioritize inbox guidance and keep the tools CTA as the next action.
+
 ## Build and lint
 
 ```bash

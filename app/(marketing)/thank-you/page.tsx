@@ -5,6 +5,9 @@ import { Card } from "@/components/shared/ui/card";
 import { FooterSection } from "@/features/landing/sections/footer";
 
 export default function ThankYouPage() {
+  const blueprintDownloadUrl = process.env.BLUEPRINT_DOWNLOAD_URL;
+  const isDownloadAvailable = Boolean(blueprintDownloadUrl);
+
   return (
     <div className="min-h-screen">
       <main className="relative py-18 md:py-24">
@@ -15,7 +18,7 @@ export default function ThankYouPage() {
                 Access Confirmed
               </p>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-                Thank you. You are now on the list.
+                Thank you. Your signup is complete.
               </h1>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-text-muted md:text-base">
                 Your signup is complete. Please check your inbox for your AI Wealth
@@ -25,11 +28,12 @@ export default function ThankYouPage() {
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl border border-card-border/80 bg-[#101416]/80 p-5">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-wealth-gold/80">
-                    Next Step
+                    Delivery Status
                   </p>
                   <p className="mt-2 text-sm leading-7 text-text-muted">
-                    While you wait, explore our curated AI and automation tool stack
-                    designed for structured execution.
+                    {isDownloadAvailable
+                      ? "Your direct blueprint download is now available. You can still check your inbox for the follow-up sequence."
+                      : "Your blueprint is being delivered by email. Check your inbox in the next few minutes."}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-card-border/80 bg-[#101416]/80 p-5">
@@ -44,8 +48,24 @@ export default function ThankYouPage() {
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                {isDownloadAvailable ? (
+                  <a
+                    href={blueprintDownloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button className="w-full sm:w-auto">Download the Blueprint</Button>
+                  </a>
+                ) : (
+                  <Button disabled className="w-full sm:w-auto">
+                    Download Link Coming to Your Inbox
+                  </Button>
+                )}
                 <Link href="/tools" className="w-full sm:w-auto">
-                  <Button className="w-full sm:w-auto">View Recommended Tools</Button>
+                  <Button variant="secondary" className="w-full sm:w-auto">
+                    View Recommended Tools
+                  </Button>
                 </Link>
                 <Link href="/" className="w-full sm:w-auto">
                   <Button variant="secondary" className="w-full sm:w-auto">
