@@ -76,10 +76,10 @@ Choose delivery behavior via env:
 
 ```env
 LEAD_MAGNET_DELIVERY_MODE=download
-BLUEPRINT_DOWNLOAD_URL=https://your-domain.example/ai-wealth-blueprint.pdf
+BLUEPRINT_DOWNLOAD_URL=/blueprint.pdf
 ```
 
-- `LEAD_MAGNET_DELIVERY_MODE=download`: shows a direct download CTA (uses URL above, or placeholder link if omitted)
+- `LEAD_MAGNET_DELIVERY_MODE=download`: shows a direct download CTA (defaults to `/blueprint.pdf`)
 - `LEAD_MAGNET_DELIVERY_MODE=email`: hides direct download and prioritizes inbox delivery messaging
 
 ## Build and lint

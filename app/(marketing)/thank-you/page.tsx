@@ -3,12 +3,11 @@ import { Container } from "@/components/shared/layout/container";
 import { Button } from "@/components/shared/ui/button";
 import { Card } from "@/components/shared/ui/card";
 import { FooterSection } from "@/features/landing/sections/footer";
-import {
-  isLeadMagnetDownloadEnabled,
-  leadMagnetConfig,
-} from "@/features/lead-magnet/config";
+import { leadMagnetConfig } from "@/features/lead-magnet/config";
 
 export default function ThankYouPage() {
+  const blueprintDownloadUrl = leadMagnetConfig.downloadUrl;
+
   return (
     <div className="min-h-screen">
       <main className="relative py-18 md:py-24">
@@ -32,9 +31,8 @@ export default function ThankYouPage() {
                     Delivery Status
                   </p>
                   <p className="mt-2 text-sm leading-7 text-text-muted">
-                    {isLeadMagnetDownloadEnabled
-                      ? "Your direct blueprint download is now available. You can still check your inbox for the follow-up sequence."
-                      : "Your blueprint is being delivered by email mode. Check your inbox in the next few minutes."}
+                    Your direct blueprint download is now available. You can still
+                    check your inbox for the follow-up sequence.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-card-border/80 bg-[#101416]/80 p-5">
@@ -49,20 +47,14 @@ export default function ThankYouPage() {
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                {isLeadMagnetDownloadEnabled ? (
-                  <a
-                    href={leadMagnetConfig.downloadUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button className="w-full sm:w-auto">Download the Blueprint</Button>
-                  </a>
-                ) : (
-                  <Button disabled className="w-full sm:w-auto">
-                    Download Link Coming to Your Inbox
-                  </Button>
-                )}
+                <a
+                  href={blueprintDownloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button className="w-full sm:w-auto">Download Blueprint</Button>
+                </a>
                 <Link href="/tools" className="w-full sm:w-auto">
                   <Button variant="secondary" className="w-full sm:w-auto">
                     View Recommended Tools
