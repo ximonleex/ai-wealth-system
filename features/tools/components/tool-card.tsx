@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import { Card } from "@/components/shared/ui/card";
 import { Button } from "@/components/shared/ui/button";
 import { ToolItem } from "@/features/tools/types/tool";
@@ -8,6 +9,15 @@ type ToolCardProps = {
 };
 
 export function ToolCard({ tool }: ToolCardProps) {
+  const handleAffiliateClick = () => {
+    // Placeholder for future analytics integration (GA/Meta/custom).
+    console.info("[affiliate_click]", {
+      toolId: tool.id,
+      toolName: tool.name,
+      destination: tool.affiliateUrl,
+    });
+  };
+
   return (
     <Card className="h-full border-white/10 bg-gradient-to-b from-[#16211e]/65 to-[#121719]/72 p-6 md:p-7">
       <div className="flex h-full flex-col">
@@ -39,9 +49,21 @@ export function ToolCard({ tool }: ToolCardProps) {
         </dl>
 
         <div className="mt-6 pt-2">
-          <Link href={tool.affiliateUrl} className="w-full">
-            <Button fullWidth>{tool.ctaText}</Button>
-          </Link>
+          <a
+            href={tool.affiliateUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="block w-full"
+            onClick={handleAffiliateClick}
+            data-tool-id={tool.id}
+            data-tool-name={tool.name}
+            data-affiliate-url={tool.affiliateUrl}
+            data-analytics-event="affiliate_tool_click"
+          >
+            <Button fullWidth className="shadow-[0_12px_32px_rgba(8,24,19,0.5)]">
+              {tool.ctaText}
+            </Button>
+          </a>
         </div>
       </div>
     </Card>

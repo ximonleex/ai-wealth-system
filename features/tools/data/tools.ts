@@ -9,7 +9,8 @@ export const toolsData: ToolItem[] = [
     bestFor: "Beginners building content and service workflows",
     keyBenefit: "Turns ideas into structured outputs in minutes",
     ctaText: "Explore ChatGPT",
-    affiliateUrl: "#affiliate-chatgpt",
+    affiliateUrl:
+      "https://example.com/affiliate/chatgpt?utm_source=ai-wealth-blueprint&utm_medium=tools-page&utm_campaign=affiliate",
     iconLabel: "AI",
   },
   {
@@ -20,7 +21,8 @@ export const toolsData: ToolItem[] = [
     bestFor: "Founders creating a repeatable execution system",
     keyBenefit: "Keeps strategy, prompts, and execution in one workspace",
     ctaText: "Explore Notion AI",
-    affiliateUrl: "#affiliate-notion-ai",
+    affiliateUrl:
+      "https://example.com/affiliate/notion-ai?utm_source=ai-wealth-blueprint&utm_medium=tools-page&utm_campaign=affiliate",
     iconLabel: "NW",
   },
   {
@@ -31,7 +33,8 @@ export const toolsData: ToolItem[] = [
     bestFor: "Automating lead handling and backend operations",
     keyBenefit: "Transforms disconnected tools into one automated pipeline",
     ctaText: "Explore Zapier",
-    affiliateUrl: "#affiliate-zapier",
+    affiliateUrl:
+      "https://example.com/affiliate/zapier?utm_source=ai-wealth-blueprint&utm_medium=tools-page&utm_campaign=affiliate",
     iconLabel: "ZA",
   },
   {
@@ -42,7 +45,8 @@ export const toolsData: ToolItem[] = [
     bestFor: "Builders who need more flexible process orchestration",
     keyBenefit: "Enables multi-step automations with precision and scale",
     ctaText: "Explore Make",
-    affiliateUrl: "#affiliate-make",
+    affiliateUrl:
+      "https://example.com/affiliate/make?utm_source=ai-wealth-blueprint&utm_medium=tools-page&utm_campaign=affiliate",
     iconLabel: "MK",
   },
   {
@@ -53,7 +57,8 @@ export const toolsData: ToolItem[] = [
     bestFor: "Launching polished funnels and offer pages quickly",
     keyBenefit: "Delivers premium front-end quality without engineering overhead",
     ctaText: "Explore Framer",
-    affiliateUrl: "#affiliate-framer",
+    affiliateUrl:
+      "https://example.com/affiliate/framer?utm_source=ai-wealth-blueprint&utm_medium=tools-page&utm_campaign=affiliate",
     iconLabel: "FR",
   },
   {
@@ -64,7 +69,8 @@ export const toolsData: ToolItem[] = [
     bestFor: "Building an owned list and long-term digital asset",
     keyBenefit: "Combines publishing, growth tools, and monetization in one stack",
     ctaText: "Explore Beehiiv",
-    affiliateUrl: "#affiliate-beehiiv",
+    affiliateUrl:
+      "https://example.com/affiliate/beehiiv?utm_source=ai-wealth-blueprint&utm_medium=tools-page&utm_campaign=affiliate",
     iconLabel: "BH",
   },
 ];

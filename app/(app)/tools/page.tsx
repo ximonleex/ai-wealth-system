@@ -16,7 +16,8 @@ export default function ToolsDirectoryPage() {
               description="A focused collection of recommended tools to help you build and scale a structured AI income system with less operational noise."
             />
             <p className="mt-5 max-w-3xl text-xs leading-6 tracking-[0.04em] text-text-muted/90 md:text-sm">
-              Affiliate links are placeholders for now. Replace each URL when your partner links are ready.
+              Affiliate links are active placeholders. Replace each URL with your partner
+              tracking link when ready.
             </p>
           </div>
 

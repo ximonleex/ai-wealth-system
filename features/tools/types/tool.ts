@@ -7,4 +7,5 @@ export type ToolItem = {
   ctaText: string;
   affiliateUrl: string;
   iconLabel: string;
+  trackingLabel?: string;
 };
