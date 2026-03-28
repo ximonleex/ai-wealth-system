@@ -3,11 +3,12 @@ import { Container } from "@/components/shared/layout/container";
 import { Button } from "@/components/shared/ui/button";
 import { Card } from "@/components/shared/ui/card";
 import { FooterSection } from "@/features/landing/sections/footer";
+import {
+  isLeadMagnetDownloadEnabled,
+  leadMagnetConfig,
+} from "@/features/lead-magnet/config";
 
 export default function ThankYouPage() {
-  const blueprintDownloadUrl = process.env.BLUEPRINT_DOWNLOAD_URL;
-  const isDownloadAvailable = Boolean(blueprintDownloadUrl);
-
   return (
     <div className="min-h-screen">
       <main className="relative py-18 md:py-24">
@@ -18,11 +19,11 @@ export default function ThankYouPage() {
                 Access Confirmed
               </p>
               <h1 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-                Thank you. Your signup is complete.
+                Your AI Wealth Blueprint is ready.
               </h1>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-text-muted md:text-base">
-                Your signup is complete. Please check your inbox for your AI Wealth
-                Blueprint and follow-up instructions.
+                Signup confirmed. You can access your blueprint now and also check
+                your inbox for strategic follow-up guidance.
               </p>
 
               <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -31,9 +32,9 @@ export default function ThankYouPage() {
                     Delivery Status
                   </p>
                   <p className="mt-2 text-sm leading-7 text-text-muted">
-                    {isDownloadAvailable
+                    {isLeadMagnetDownloadEnabled
                       ? "Your direct blueprint download is now available. You can still check your inbox for the follow-up sequence."
-                      : "Your blueprint is being delivered by email. Check your inbox in the next few minutes."}
+                      : "Your blueprint is being delivered by email mode. Check your inbox in the next few minutes."}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-card-border/80 bg-[#101416]/80 p-5">
@@ -41,16 +42,16 @@ export default function ThankYouPage() {
                     Important
                   </p>
                   <p className="mt-2 text-sm leading-7 text-text-muted">
-                    If you do not see the email in a few minutes, check your spam or
-                    promotions folder and move it to primary.
+                    Check your spam or promotions folder if needed, then move our
+                    message to primary to receive future updates.
                   </p>
                 </div>
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                {isDownloadAvailable ? (
+                {isLeadMagnetDownloadEnabled ? (
                   <a
-                    href={blueprintDownloadUrl}
+                    href={leadMagnetConfig.downloadUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"

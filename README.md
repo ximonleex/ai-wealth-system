@@ -70,15 +70,17 @@ The app sends a JSON POST payload in this format:
    - success message appears for 2xx webhook responses
    - error message appears for non-2xx responses or network failures
 
-### Optional direct blueprint download on thank-you page
+### Lead magnet delivery mode on thank-you page
 
-If you want the thank-you page to show a direct download CTA, set:
+Choose delivery behavior via env:
 
 ```env
+LEAD_MAGNET_DELIVERY_MODE=download
 BLUEPRINT_DOWNLOAD_URL=https://your-domain.example/ai-wealth-blueprint.pdf
 ```
 
-If this variable is not set, the page will prioritize inbox guidance and keep the tools CTA as the next action.
+- `LEAD_MAGNET_DELIVERY_MODE=download`: shows a direct download CTA (uses URL above, or placeholder link if omitted)
+- `LEAD_MAGNET_DELIVERY_MODE=email`: hides direct download and prioritizes inbox delivery messaging
 
 ## Build and lint
 
