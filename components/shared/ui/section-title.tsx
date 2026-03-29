@@ -1,0 +1,34 @@
+import { ReactNode } from "react";
+
+type SectionTitleProps = {
+  eyebrow?: string;
+  title: string;
+  description?: ReactNode;
+  align?: "left" | "center";
+};
+
+export function SectionTitle({
+  eyebrow,
+  title,
+  description,
+  align = "left",
+}: SectionTitleProps) {
+  const textAlignment = align === "center" ? "text-center" : "text-left";
+  const descriptionWidth = align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl";
+
+  return (
+    <div className={`space-y-4 ${textAlignment}`}>
+      {eyebrow ? (
+        <p className="text-[11px] tracking-[0.24em] text-wealth-gold uppercase">{eyebrow}</p>
+      ) : null}
+      <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-[2.6rem]">
+        {title}
+      </h2>
+      {description ? (
+        <p className={`${descriptionWidth} text-sm leading-7 text-text-muted md:text-base`}>
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}
